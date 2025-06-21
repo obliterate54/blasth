@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Rocket, Users, Target, Zap, ExternalLink, MessageCircle, Twitter, Menu, X } from 'lucide-react';
+import { Rocket, Users, Target, Zap, ExternalLink, Menu, X } from 'lucide-react';
+import { FaXTwitter } from 'react-icons/fa6';
+import { FaTelegramPlane } from 'react-icons/fa';
 
 function App() {
   const [isLaunched, setIsLaunched] = useState(false);
@@ -34,18 +36,22 @@ function App() {
             {/* Desktop Social Links */}
             <div className="hidden md:flex items-center space-x-4">
               <a 
-                href="#" 
+                href="https://t.me/ablastcoinsol" 
+                target="_blank" 
+                rel="noopener noreferrer"
                 className="p-2 bg-blue-600 rounded-full hover:bg-blue-500 transform hover:scale-110 transition-all duration-300"
                 aria-label="Telegram"
               >
-                <MessageCircle size={20} />
+                <FaTelegramPlane size={20} />
               </a>
               <a 
-                href="#" 
-                className="p-2 bg-black border border-white rounded-full hover:bg-gray-800 transform hover:scale-110 transition-all duration-300"
-                aria-label="Twitter"
+                href="https://x.com/ablastcoinsol" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="p-2 bg-black border border-white rounded-full hover:bg-gray-800 transform hover:scale-110 transition-all duration-300"
+    aria-label="X"
               >
-                <Twitter size={20} />
+                <FaXTwitter size={20} />
               </a>
               <a 
                 href="#" 
@@ -82,18 +88,22 @@ function App() {
               <div className="flex flex-col space-y-4 p-4">
                 <div className="flex justify-center space-x-4">
                   <a 
-                    href="#" 
-                    className="p-3 bg-blue-600 rounded-full hover:bg-blue-500 transform hover:scale-110 transition-all duration-300"
-                    aria-label="Telegram"
+                    href="https://t.me/ablastcoinsol" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="p-2 bg-blue-600 rounded-full hover:bg-blue-500 transform hover:scale-110 transition-all duration-300"
+                aria-label="Telegram"
                   >
-                    <MessageCircle size={20} />
+                    <FaTelegramPlane size={20} />
                   </a>
                   <a 
-                    href="#" 
-                    className="p-3 bg-black border border-white rounded-full hover:bg-gray-800 transform hover:scale-110 transition-all duration-300"
-                    aria-label="Twitter"
+                    href="https://x.com/ablastcoinsol" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="p-2 bg-black border border-white rounded-full hover:bg-gray-800 transform hover:scale-110 transition-all duration-300"
+    aria-label="X"
                   >
-                    <Twitter size={20} />
+                    <FaXTwitter size={20} />
                   </a>
                   <a 
                     href="#" 
@@ -124,7 +134,7 @@ function App() {
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-40"
           style={{
-            backgroundImage: 'url(/make_the_text_tighter_and_smaller_and.png)',
+            backgroundImage: 'url(/chat_header_notext.png)',
             transform: `translateY(${scrollY * 0.5}px)`
           }}
         />
@@ -144,7 +154,7 @@ function App() {
             </h1>
           </div>
           
-          <p className="text-xl md:text-3xl font-bold text-yellow-300 mb-8 animate-pulse tracking-wide">
+          <p className="text-xl md:text-3xl font-bold text-orange-400 drop-shadow-md mb-8 animate-pulse tracking-wide">
             WHEN THE WORLD ENDS, WE PUMP
           </p>
           
@@ -163,11 +173,11 @@ function App() {
           </div>
 
           <div className="flex justify-center gap-6 md:hidden">
-            <a href="#" className="p-3 bg-blue-600 rounded-full hover:bg-blue-500 transform hover:scale-110 transition-all duration-300 animate-bounce" style={{ animationDelay: '0.5s' }}>
-              <MessageCircle size={24} />
+            <a href="https://t.me/ablastcoinsol" className="p-3 bg-blue-600 rounded-full hover:bg-blue-500 transform hover:scale-110 transition-all duration-300 animate-bounce" style={{ animationDelay: '0.5s' }}>
+              <FaTelegramPlane size={24} />
             </a>
-            <a href="#" className="p-3 bg-black rounded-full hover:bg-gray-800 transform hover:scale-110 transition-all duration-300 animate-bounce" style={{ animationDelay: '1s' }}>
-              <Twitter size={24} />
+            <a href="https://x.com/ablastcoinsol" className="p-3 bg-black rounded-full hover:bg-gray-800 transform hover:scale-110 transition-all duration-300 animate-bounce" style={{ animationDelay: '1s' }}>
+              <FaXTwitter size={24} />
             </a>
           </div>
         </div>
@@ -327,7 +337,7 @@ function App() {
 
             <div className="p-8 bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg border-2 border-yellow-500">
               <h3 className="text-2xl font-bold text-yellow-400 mb-6 flex items-center">
-                <MessageCircle className="mr-2" />
+                <FaTelegramPlane className="mr-2" />
                 WAR ROOM FEED
               </h3>
               <div className="space-y-4">
@@ -356,13 +366,22 @@ function App() {
             </div>
 
             <div className="flex justify-center gap-6 mb-8">
-              <a href="#" className="p-4 bg-blue-600 rounded-full hover:bg-blue-500 transform hover:scale-110 transition-all duration-300">
-                <MessageCircle size={24} />
+              <a href="https://t.me/ablastcoinsol" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="p-4 bg-blue-600 rounded-full hover:bg-blue-500 transform hover:scale-110 transition-all duration-300">
+                <FaTelegramPlane size={24} />
               </a>
-              <a href="#" className="p-4 bg-black border-2 border-white rounded-full hover:bg-gray-800 transform hover:scale-110 transition-all duration-300">
-                <Twitter size={24} />
+              <a  href="https://x.com/ablastcoinsol" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="p-4 bg-black border-2 border-white rounded-full hover:bg-gray-800 transform hover:scale-110 transition-all duration-300">
+                <FaXTwitter size={24} />
               </a>
-              <a href="#" className="p-4 bg-purple-600 rounded-full hover:bg-purple-500 transform hover:scale-110 transition-all duration-300">
+              <a href="#" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="p-4 bg-purple-600 rounded-full hover:bg-purple-500 transform hover:scale-110 transition-all duration-300">
                 <ExternalLink size={24} />
               </a>
             </div>
