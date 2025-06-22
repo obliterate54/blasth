@@ -36,7 +36,7 @@ function App() {
             {/* Desktop Social Links */}
             <div className="hidden md:flex items-center space-x-4">
               <a 
-                href="https://t.me/ablastcoinsol" 
+                href="https://t.me/blastcoinseason" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="p-2 bg-blue-600 rounded-full hover:bg-blue-500 transform hover:scale-110 transition-all duration-300"
@@ -45,7 +45,7 @@ function App() {
                 <FaTelegramPlane size={20} />
               </a>
               <a 
-                href="https://x.com/ablastcoinsol" 
+                href="https://x.com/blastcoinseason" 
     target="_blank" 
     rel="noopener noreferrer"
     className="p-2 bg-black border border-white rounded-full hover:bg-gray-800 transform hover:scale-110 transition-all duration-300"
@@ -88,7 +88,7 @@ function App() {
               <div className="flex flex-col space-y-4 p-4">
                 <div className="flex justify-center space-x-4">
                   <a 
-                    href="https://t.me/ablastcoinsol" 
+                    href="https://t.me/blastcoinseason" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="p-2 bg-blue-600 rounded-full hover:bg-blue-500 transform hover:scale-110 transition-all duration-300"
@@ -97,7 +97,7 @@ function App() {
                     <FaTelegramPlane size={20} />
                   </a>
                   <a 
-                    href="https://x.com/ablastcoinsol" 
+                    href="https://x.com/blastcoinseason" 
     target="_blank" 
     rel="noopener noreferrer"
     className="p-2 bg-black border border-white rounded-full hover:bg-gray-800 transform hover:scale-110 transition-all duration-300"
@@ -173,10 +173,10 @@ function App() {
           </div>
 
           <div className="flex justify-center gap-6 md:hidden">
-            <a href="https://t.me/ablastcoinsol" className="p-3 bg-blue-600 rounded-full hover:bg-blue-500 transform hover:scale-110 transition-all duration-300 animate-bounce" style={{ animationDelay: '0.5s' }}>
+            <a href="https://t.me/blastcoinseason" className="p-3 bg-blue-600 rounded-full hover:bg-blue-500 transform hover:scale-110 transition-all duration-300 animate-bounce" style={{ animationDelay: '0.5s' }}>
               <FaTelegramPlane size={24} />
             </a>
-            <a href="https://x.com/ablastcoinsol" className="p-3 bg-black rounded-full hover:bg-gray-800 transform hover:scale-110 transition-all duration-300 animate-bounce" style={{ animationDelay: '1s' }}>
+            <a href="https://x.com/blastcoinseason" className="p-3 bg-black rounded-full hover:bg-gray-800 transform hover:scale-110 transition-all duration-300 animate-bounce" style={{ animationDelay: '1s' }}>
               <FaXTwitter size={24} />
             </a>
           </div>
@@ -219,10 +219,10 @@ function App() {
               </div>
               
               <div className="p-6 bg-gradient-to-r from-purple-800 to-red-600 rounded-lg transform hover:scale-105 transition-all duration-300 border-2 border-red-400">
-                <h3 className="text-2xl font-bold text-yellow-300 mb-4">💀 DEGEN WARFARE</h3>
+                <h3 className="text-2xl font-bold text-yellow-300 mb-4">💀 MEME MILITIA</h3>
                 <p className="text-yellow-100 font-semibold">
-                  Built by degens, for degens. No suits, no meetings, no mercy. 
-                  Pure meme energy weaponized for maximum gains.
+                  Born in chaos. Trained in memes. 
+                  $BLAST isn't a project — it's a digital uprising with no off switch.
                 </p>
               </div>
             </div>
@@ -294,12 +294,12 @@ function App() {
             </div>
 
             <div className="p-6 bg-gradient-to-br from-green-600 to-blue-700 rounded-lg text-center transform hover:scale-105 transition-all duration-300 border-2 border-green-400">
-              <h3 className="text-3xl font-black text-white mb-2">100%</h3>
+              <h3 className="text-3xl font-black text-white mb-2">TBA</h3>
               <p className="text-white font-bold">LIQUIDITY POOL</p>
             </div>
 
             <div className="p-6 bg-gradient-to-br from-red-600 to-pink-700 rounded-lg text-center transform hover:scale-105 transition-all duration-300 border-2 border-red-400">
-              <h3 className="text-3xl font-black text-white mb-2">0%</h3>
+              <h3 className="text-3xl font-black text-white mb-2">TBA</h3>
               <p className="text-white font-bold">TEAM ALLOCATION</p>
             </div>
 
@@ -366,13 +366,13 @@ function App() {
             </div>
 
             <div className="flex justify-center gap-6 mb-8">
-              <a href="https://t.me/ablastcoinsol" 
+              <a href="https://t.me/blastcoinseason" 
           target="_blank" 
           rel="noopener noreferrer"
           className="p-4 bg-blue-600 rounded-full hover:bg-blue-500 transform hover:scale-110 transition-all duration-300">
                 <FaTelegramPlane size={24} />
               </a>
-              <a  href="https://x.com/ablastcoinsol" 
+              <a  href="https://x.com/blastcoinseason" 
           target="_blank" 
           rel="noopener noreferrer"
           className="p-4 bg-black border-2 border-white rounded-full hover:bg-gray-800 transform hover:scale-110 transition-all duration-300">
@@ -391,7 +391,7 @@ function App() {
                 ⚠️ THIS IS NOT FINANCIAL ADVICE. THIS IS WARFARE. ⚠️
               </p>
               <p className="text-gray-600 mt-2">
-                © 2024 $BLAST - Built for the apocalypse
+                © 2025 $BLAST - Built for the apocalypse
               </p>
             </div>
           </div>
