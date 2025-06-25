@@ -2,17 +2,31 @@ import React, { useState, useEffect } from 'react';
 import { Rocket, Users, Target, Zap, ExternalLink, Menu, X } from 'lucide-react';
 import { FaXTwitter } from 'react-icons/fa6';
 import { FaTelegramPlane } from 'react-icons/fa';
+import { Copy, CheckCircle } from 'lucide-react';
 
 function App() {
-  const [isLaunched, setIsLaunched] = useState(false);
+  const [isLaunched, setIsLaunched] = useState(true);
   const [scrollY, setScrollY] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [copied, setCopied] = useState(false);
+const contractAddress = "6bhUU4nWX4r1j6mruaeZqgg4LrwKNRtDi89d1pZzpump"; // Replace with real address
+const coinUrl = "https://pump.fun/coin/6bhUU4nWX4r1j6mruaeZqgg4LrwKNRtDi89d1pZzpump"; // Replace with actual URL
+
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+  const copyToClipboard = async () => {
+  try {
+    await navigator.clipboard.writeText(contractAddress);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  } catch (err) {
+    console.error('Failed to copy: ', err);
+  }
+};
 
   return (
     <div className="min-h-screen bg-black text-white overflow-x-hidden">
@@ -60,16 +74,25 @@ function App() {
               >
                 <ExternalLink size={20} />
               </a>
-              <button 
-                className={`px-4 py-2 text-sm font-bold rounded-lg transform transition-all duration-300 ${
-                  isLaunched 
-                    ? 'bg-gradient-to-r from-green-500 to-yellow-500 text-black hover:scale-105' 
-                    : 'bg-gray-600 text-gray-400 cursor-not-allowed'
-                }`}
-                disabled={!isLaunched}
-              >
-                {isLaunched ? 'BUY NOW' : 'SOON'}
-              </button>
+              {isLaunched ? (
+  <a 
+    href={coinUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="px-6 py-2 bg-gradient-to-r from-green-500 to-yellow-500 text-black font-bold rounded-lg hover:scale-110 transform transition-all duration-300 animate-pulse"
+  >
+    <Rocket className="inline mr-2" size={16} />
+    BUY NOW
+  </a>
+) : (
+  <button 
+    className="px-6 py-2 bg-gray-600 text-gray-400 font-bold rounded-lg cursor-not-allowed"
+    disabled
+  >
+    SOON
+  </button>
+)}
+
             </div>
 
             {/* Mobile Menu Button */}
@@ -113,16 +136,24 @@ function App() {
                     <ExternalLink size={20} />
                   </a>
                 </div>
-                <button 
-                  className={`w-full py-3 text-lg font-bold rounded-lg transform transition-all duration-300 ${
-                    isLaunched 
-                      ? 'bg-gradient-to-r from-green-500 to-yellow-500 text-black hover:scale-105' 
-                      : 'bg-gray-600 text-gray-400 cursor-not-allowed'
-                  }`}
-                  disabled={!isLaunched}
-                >
-                  {isLaunched ? 'BUY NOW' : 'LAUNCHING SOON'}
-                </button>
+                {isLaunched ? (
+  <a 
+    href={coinUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-full py-3 text-lg font-bold rounded-lg bg-gradient-to-r from-green-500 to-yellow-500 text-black hover:scale-105 transform transition-all duration-300 animate-pulse"
+  >
+    BUY NOW
+  </a>
+) : (
+  <button 
+    className="w-full py-3 text-lg font-bold rounded-lg bg-gray-600 text-gray-400 cursor-not-allowed"
+    disabled
+  >
+    LAUNCHING SOON
+  </button>
+)}
+
               </div>
             </div>
           )}
@@ -139,6 +170,7 @@ function App() {
           }}
         />
         
+
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-20 left-10 w-4 h-4 bg-yellow-400 rounded-full animate-ping" />
@@ -157,19 +189,47 @@ function App() {
           <p className="text-xl md:text-3xl font-bold text-orange-400 drop-shadow-md mb-8 animate-pulse tracking-wide">
             WHEN THE WORLD ENDS, WE PUMP
           </p>
-          
+          {/* Contract Address */}
+<div className="mb-8 max-w-2xl mx-auto">
+  <p className="text-sm text-gray-400 mb-2">CONTRACT ADDRESS (CA)</p>
+  <div className="flex items-center justify-center bg-gray-800/50 backdrop-blur-sm border border-yellow-400/30 rounded-lg p-4">
+    <code className="text-yellow-400 font-mono text-sm md:text-base break-all mr-3">
+      {contractAddress}
+    </code>
+    <button
+      onClick={copyToClipboard}
+      className="p-2 bg-yellow-400 text-black rounded-lg hover:bg-yellow-300 transform hover:scale-110 transition-all duration-300 flex-shrink-0"
+      title="Copy Contract Address"
+    >
+      {copied ? <CheckCircle size={16} /> : <Copy size={16} />}
+    </button>
+  </div>
+  {copied && (
+    <p className="text-green-400 text-sm mt-2 animate-pulse">
+      ✅ Contract address copied to clipboard!
+    </p>
+  )}
+</div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <button 
-              className={`px-8 py-4 text-xl font-bold rounded-lg transform transition-all duration-300 ${
-                isLaunched 
-                  ? 'bg-gradient-to-r from-green-500 to-yellow-500 text-black hover:scale-110 animate-pulse' 
-                  : 'bg-gray-600 text-gray-400 cursor-not-allowed'
-              }`}
-              disabled={!isLaunched}
-            >
-              <Rocket className="inline mr-2" />
-              {isLaunched ? 'BUY ON PUMP.FUN' : 'LAUNCHING SOON...'}
-            </button>
+            {isLaunched ? (
+  <a 
+    href={coinUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="px-8 py-4 text-xl font-bold rounded-lg transform transition-all duration-300 bg-gradient-to-r from-green-500 to-yellow-500 text-black hover:scale-110 animate-pulse"
+  >
+    <Rocket className="inline mr-2" />
+    BUY ON PUMP.FUN
+  </a>
+) : (
+  <button 
+    className="px-8 py-4 text-xl font-bold rounded-lg bg-gray-600 text-gray-400 cursor-not-allowed"
+    disabled
+  >
+    LAUNCHING SOON...
+  </button>
+)}
+
           </div>
 
           <div className="flex justify-center gap-6 md:hidden">
